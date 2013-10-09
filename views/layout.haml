@@ -1,0 +1,40 @@
+!!!
+/[if lt IE 7] <html class="no-js ie6 oldie" lang="en">
+/[if IE 7] <html class="no-js ie7 oldie" lang="en">
+/[if IE 8] <html class="no-js ie8 oldie" lang="en">
+/ [if gt IE 8]><!
+%html.no-js{lang: "en"}
+  / <![endif]
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "IE=edge, chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title Alabama Census Tracts
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %link{href: "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css", rel: "stylesheet"}/
+    %link{href: "/stylesheets/main.css", rel: "stylesheet"}/
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"}
+      /[if lt IE 7]
+        <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+        <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    %script{src: "//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"}
+    -# %link{href: "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css", rel: "stylesheet"}/
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"}
+    %script{src: "http://d3js.org/d3.v3.min.js"}
+    %script{src: "http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js"}
+    //%script{src: "http://beta.mapquestapi.com/sdk/leaflet/v0.1/mq-map.js?key=#{@mapquest_key}"}
+    //%script{src: "http://beta.mapquestapi.com/sdk/leaflet/v0.1/mq-routing.js?key=#{@mapquest_key}"}
+    //%script{src: "/javascripts/mq-map.js?key=#{@mapquest_key}"}
+    //%script{src: "/javascripts/mq-routing.js?key=#{@mapquest_key}"}
+    %script{src: "/javascripts/util.js"}
+    %script{src: "/javascripts/map.js"}
+  %body{ class: "section-0" }
+    .container-fluid
+      //.fluid-row
+      //  %nav.navbar.navbar-default{role: "navigation"}
+      //    %a.navbar-brand{href:"#"} Mapbox + Coffee
+      //  = yield
+      .fluid-row
+        = yield
+        
+
